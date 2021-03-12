@@ -3,7 +3,7 @@ insert into products (name, cost) values
 ('Egg', 67),
 ('Milk', 70),
 ('Cartoon', 85),
-('Pasta', 44)
+('Pasta', 44),
 ('Potato', 12),
 ('Yogurt', 46),
 ('Water', 57),

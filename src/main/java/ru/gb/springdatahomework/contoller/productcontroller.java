@@ -4,7 +4,9 @@ package ru.gb.springdatahomework.contoller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+
 import ru.gb.springdatahomework.model.Product;
+import ru.gb.springdatahomework.model.Sort;
 import ru.gb.springdatahomework.services.productService;
 
 
@@ -18,8 +20,8 @@ public class productcontroller {
     private productService productService;
 
     @GetMapping
-    public List<Product> getAll() {
-        return productService.getAll();
+    public List<Product> getAll(@RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "5") Integer size) {
+        return productService.getAll(page-1, size);
     }
 
 
